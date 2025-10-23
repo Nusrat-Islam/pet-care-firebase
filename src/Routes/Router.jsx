@@ -4,6 +4,8 @@ import PetCards from "../Pages/PetCards";
 import Home from "../Components/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import ServiceDetails from "../Pages/ServiceDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -17,11 +19,7 @@ export const router = createBrowserRouter([
              loader:() => fetch('/pet.json'),
            
         },
-        {
-            path:'/card',
-            element:<PetCards></PetCards>,
-            
-        },
+    
         {
           path:'/login',
           element:<Login></Login>
@@ -30,6 +28,7 @@ export const router = createBrowserRouter([
           path:'/register',
           element:<Register></Register>
         },
+      
 
     ]
    
@@ -37,5 +36,12 @@ export const router = createBrowserRouter([
   {
     path: "/*",
     element: <div>404 Error</div>
-  }
+  },
+    {
+          path:'/service/:id',
+          element:<PrivateRoute>
+            <ServiceDetails></ServiceDetails>,
+          </PrivateRoute>,
+          loader:() => fetch('/pet.json'),
+        },
 ]);

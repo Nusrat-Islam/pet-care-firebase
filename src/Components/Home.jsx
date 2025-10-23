@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { use } from 'react';
 import PetCards from '../Pages/PetCards';
 import { useLoaderData } from 'react-router';
 import HeroSlider from './HeroSlider';
@@ -7,11 +7,14 @@ import WinterCareTips from './WinterCareTips';
 import ExpertVets from './ExpertVets';
 import StatsSection from './StatsSection';
 
+
+
 const Home = () => {
+  
     const petsData = useLoaderData();
-    console.log(petsData);
+    // console.log(petsData);
     return (
- 
+  
    <div>
        <div>
          <HeroSlider></HeroSlider>

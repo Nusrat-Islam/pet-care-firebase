@@ -3,8 +3,11 @@ import { Link } from "react-router";
 import { Star } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { use } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const PetsServiceCard = ({ service }) => {
+  const {user} = use(AuthContext)
   const { serviceId, serviceName, price, rating, image } = service;
 
   useEffect(() => {
@@ -41,13 +44,14 @@ const PetsServiceCard = ({ service }) => {
 
         {/* View Details Button */}
         <div className="card-actions justify-center mt-3">
-          <Link className="flex justify-center items-center "to={`/services/${serviceId}`}>
-             <button className=" rounded-xl py-4 px-8 rounded-xm text-white font-semibold  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-all duration-300">
+          <Link to={`/service/${serviceId}`} className="flex justify-center items-center 
+             rounded-xl py-4 px-8 rounded-xm text-white font-semibold  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-all duration-300">
               View Details
-            </button>
+           
           
            
           </Link>
+        
         </div>
       </div>
     </div>
