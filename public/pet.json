@@ -1,0 +1,110 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and stylish warm outfit options to keep your dog comfortable in the cold season.",
+    "image": "https://i.ibb.co.com/0R97jktW/Dog-7.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.ibb.co.com/jknrZq6C/Dog-Grooming-Isn-t-Just-About-Looks-Here-s-Why-It-Matters.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Holiday Pet Spa",
+    "providerName": "FurryFest Spa",
+    "providerEmail": "contact@furryfest.com",
+    "price": 50,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Relaxing spa sessions for pets with warm towels and gentle winter care treatments.",
+    "image": "https://i.ibb.co.com/mrM15Z43/Cat-Spa-Day.jpg",
+    "category": "Spa"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Thermal Bedding & Blanket Setup",
+    "providerName": "WarmPaws Comfort",
+    "providerEmail": "support@warmpaws.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Provide your pets with cozy thermal bedding and blankets for a warm winter.",
+    "image": "https://i.ibb.co.com/tTHZcHzW/image.jpg",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Winter Paw Wax Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 15,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Protect your pet's paws from frostbite and ice with moisturizing paw wax.",
+    "image": "https://i.ibb.co.com/pjrdygkY/Cat-1.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Warm Winter Sweaters for Cats",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 22,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "Soft and cozy sweaters tailored for cats to keep them warm during winter.",
+    "image": "https://i.ibb.co.com/JwTSSYVs/Absolutely-Adorable-Cat-A-Heartwarming-Photo.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Indoor Play & Warm Exercise",
+    "providerName": "HappyPaws Center",
+    "providerEmail": "info@happypaws.com",
+    "price": 35,
+    "rating": 4.7,
+    "slotsAvailable": 3,
+    "description": "Indoor play sessions to keep your pets active and cozy during cold winter days.",
+    "image": "https://i.ibb.co.com/wrdyBdD7/download-10.jpg",
+    "category": "Activity"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Winter Hydration & Nutrition Check",
+    "providerName": "PetWell Clinic",
+    "providerEmail": "contact@petwell.com",
+    "price": 40,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Ensure your pets stay hydrated and nourished during winter with tailored nutrition plans.",
+    "image": "https://i.ibb.co.com/mrrHc87S/Superfoods-for-Pets.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Holiday Photoshoot with Winter Outfits",
+    "providerName": "FurryFest Studio",
+    "providerEmail": "contact@furryfest.com",
+    "price": 60,
+    "rating": 4.8,
+    "slotsAvailable": 2,
+    "description": "Capture your pet’s cozy winter look with a professional holiday photoshoot.",
+    "image": "https://i.ibb.co.com/0RmVhyMs/download-11.jpg",
+    "category": "Photography"
+  }
+]
