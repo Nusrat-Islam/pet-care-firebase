@@ -49,6 +49,7 @@ const handleGoogleSignin = () => {
   console.log("form google")
    googleSignin ()
   .then((result) => {
+  
    const user =result.user;
    console.log(user);
  
@@ -61,19 +62,6 @@ const handleGoogleSignin = () => {
   });
 }
 
-//forget pass
-// const handleForgetPass = (e) => {
-//   const email = emailRef.current.value;
-
-//   resetPassword(email)
-//   .then((result) => {
-//     toast.success("Check your email to reset password")
-//   })
-//     .catch((error) => {
-//     const errorMessage = error.message;
-//     toast.error(errorMessage)
-//   });
-// }
 const handleForgotPassword = () => {
     const email = emailRef.current.value;
     navigate("/forgot-password", { state: { email } });

@@ -37,7 +37,7 @@ const handleBooking = (e) => {
 
 
   return (
-    <div className="flex gap-15 justify-center items-start min-h-screen bg-gray-900 text-white px-4 py-5 ">
+    <div className="md:flex gap-15 justify-center items-start min-h-screen bg-gray-900 text-white px-4 py-5 ">
       <div className="max-w-lg  bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
         {/* Service Info */}
         <figure className="  h-80 md:h-[520px] lg:h-[400px] w-full overflow-hidden object-cover ">
@@ -93,17 +93,18 @@ const handleBooking = (e) => {
             <h3 className="text-lg font-semibold text-amber-400">
               Book Service
             </h3>
-
+            <label className="label">Your Name</label>
             <input
             onChange={handleInput}
               type="text"
               name="name"
               value={booking.name}
-              placeholder='Your Name'
-              className="w-full px-3 py-2 rounded-lg  bg-gray-800 border border-gray-600 focus:outline-none focus:border-amber-400"
+              placeholder=""
+              className="w-full px-3 py-2 rounded-lg text-white bg-gray-800 border border-gray-600 focus:outline-none focus:border-amber-400"
               required
             />
-
+             
+             <label className="label">Your Email</label>
             <input
              onChange={handleInput}
               type="text"

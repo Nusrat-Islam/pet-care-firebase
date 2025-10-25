@@ -9,20 +9,16 @@ import ExpertVets from '../Components/ExpertVets';
 import Loading from '../Components/Loading';
 
 const RootLayout = () => {
-    const {state} = useNavigation();
+    const { state } = useNavigation();
     return (
         <div className='flex flex-col min-h-screen'>
             <Navbar></Navbar>
-              
-<main className='flex-1 w-11/12 mx-auto'>
-   {state == "loading"? <Loading/> : <Outlet/>} 
-     
- 
-</main>
 
-            <footer>
+            <main className='flex-1 w-11/12 mx-auto'>
+                {state == "loading" ? <Loading /> : <Outlet />}
+            </main>
                 <Footer></Footer>
-            </footer>
+            
         </div>
     );
 };

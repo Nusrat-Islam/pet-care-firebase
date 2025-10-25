@@ -38,18 +38,18 @@ const ForgetPassword = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm">
-        <h2 className="text-2xl font-semibold mb-4 text-center">
+        <h2 className="text-2xl font-semibold mb-4 text-center text-green-700">
           Reset Password
         </h2>
         <form className="space-y-4">
           <div>
-            <label className="block text-gray-600 text-sm mb-1">Email</label>
+            <label className="block text-black text-sm mb-1">Email</label>
             <input
               type="email"
               ref={emailRef}
               defaultValue={passedEmail}
               placeholder="Enter your email"
-              className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full text-yellow-600 border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700"
               required
             />
           </div>

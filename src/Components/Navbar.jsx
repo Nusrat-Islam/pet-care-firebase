@@ -41,7 +41,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link >Services</Link>
             </li>
             <li>
               <Link to="/profile">My Profile</Link>
@@ -51,8 +51,8 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link to="/" className="btn btn-ghost normal-case text-xl flex items-center gap-2 p-0">
-          <img src={logo} alt="PAWSY Logo" className="h-14 w-14 rounded-full" />
-          <span className="text-4xl font-bold text-blue-900">
+          <img src={logo} alt="PAWSY Logo" className="h-8 w-8 md:h-14 md:w-14 rounded-full" />
+          <span className="md:text-4xl text-2xl font-bold text-blue-900">
             P<span className="text-pink-700">A</span>W<span className="text-pink-700">S</span>Y
           </span>
         </Link>
@@ -65,7 +65,7 @@ const Navbar = () => {
             <Link to="/" className="hover:text-blue-600 hover:underline">Home</Link>
           </li>
           <li>
-            <Link to="/services" className="hover:text-blue-600 hover:underline">Services</Link>
+            <Link  className="hover:text-blue-600 hover:underline">Services</Link>
           </li>
           <li>
             <Link to="/profile" className="hover:text-blue-600 hover:underline">My Profile</Link>
@@ -75,19 +75,19 @@ const Navbar = () => {
 
       {/* Navbar End: Avatar + Email + Login/Logout (Always Visible) */}
       <div className="navbar-end flex items-center gap-4">
-        {user && <span className="text-gray-700 font-medium text-lg">{user.email}</span>}
+        {/* {user && <span className="text-gray-700 font-medium text-xm md:text-lg mt-10">{user.email}</span>} */}
 
         {user ? (
           <button
             onClick={handleLogout}
-            className="btn bg-gray-600 text-white hover:bg-blue-900 transition text-lg px-6 py-2"
+            className="btn bg-gray-600 text-white hover:bg-blue-900 transition text-lg md:px-6 md:py-2 px-3 py-1"
           >
             Logout
           </button>
         ) : (
           <NavLink
             to="/login"
-            className="btn bg-gray-600 text-white hover:bg-blue-900 transition text-lg px-6 py-2"
+            className="btn bg-gray-600 text-white hover:bg-blue-900 transition text-lg md:px-6 md:py-2 px-3 py-1"
           >
             Login
           </NavLink>
@@ -97,14 +97,15 @@ const Navbar = () => {
           {user?.photoURL ? (
             <img
               src={user.photoURL}
+              referrerPolicy="no-referrer"
               alt="User Avatar"
               title={user.displayName || "Profile"}
-              className="h-12 w-12 rounded-full border-2 border-blue-700 object-cover hover:scale-105 transition-transform duration-200"
+              className="md:h-12 md:w-12 h-8 w-8 rounded-full border-2 border-blue-700  hover:scale-105 transition-transform duration-200"
             />
           ) : (
             <FaUserCircle
               title={user?.displayName || "Guest"}
-              className="text-4xl text-gray-600 hover:text-blue-700 transition-colors duration-200"
+              className=" h-12 w-12 md:h-8 md:w-8 text-4xl text-gray-600 hover:text-blue-700 transition-colors duration-200"
             />
           )}
         </Link>
