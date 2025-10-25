@@ -1,16 +1,42 @@
-# React + Vite
+# 🐾 PAWSY – Pet Care in Winter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌐 Live Website
+[Visit Live Site](https://your-live-site-link.vercel.app)  
+*(Replace this URL with your deployed project link)*
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Project Overview
+**PAWSY** is a winter-themed pet care web application designed to help pet owners take better care of their pets during the cold season.  
+The app provides **user authentication, profile management, and essential pet care services** through a clean and modern interface.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+- 🔐 **User Authentication** – Login, Register, and Reset Password using Firebase.  
+- 👤 **Profile Update** – Users can change their display name and profile photo.  
+- 🧭 **Responsive Navbar** – Shows user email and avatar when logged in.  
+- 🔒 **Private Routes** – Only logged-in users can access protected pages.  
+- 🔔 **Toast Notifications** – Real-time feedback for all user actions.  
+- 🎨 **Modern UI** – Styled with TailwindCSS and React Icons.  
+- 🪄 **Smooth Animations** – Animated sections using AOS or Framer Motion.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 npm Packages Used
+
+| Package | Description |
+|----------|-------------|
+| **react** | Core library for building UI |
+| **react-router-dom** | Routing and navigation |
+| **firebase** | Authentication and backend services |
+| **react-hot-toast** | Beautiful toast notifications |
+| **react-icons** | Icon library |
+| **tailwindcss** | CSS framework for styling |
+| **aos** *(optional)* | Scroll animations |
+| **framer-motion** *(optional)* | Advanced animations and transitions |
+
+---
+
+

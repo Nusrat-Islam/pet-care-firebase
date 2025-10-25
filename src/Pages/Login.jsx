@@ -6,11 +6,14 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { useState } from 'react';
 import { FaEye } from 'react-icons/fa';
 import { RiEyeCloseFill } from 'react-icons/ri';
+import { useRef } from 'react';
+import toast from 'react-hot-toast';
 
 const Login = () => {
-const {login} = use(AuthContext)
+const {login,  googleSignin} = use(AuthContext)
 const navigate = useNavigate();
 const [show, setShow] = useState(false)
+const emailRef = useRef()
 
 const handleLogin = (e) => {
   e.preventDefault();
@@ -21,18 +24,60 @@ const handleLogin = (e) => {
   console.log(email, password);
 
   //firebase funtionality
+  
   login(email,password)
   .then((result) => {
    const user =result.user;
    console.log(user);
+  
+   navigate("/")
+  })
+  .catch((error) => {
+        // fail → show error in form
+        if (error.code === "auth/user-not-found") {
+          toast.error("User not found!");
+        } else if (error.code === "auth/wrong-password") {
+          toast.error("Incorrect password!");
+        } else {
+          toast.error("Login failed. Try again!");
+        }
+      });
+}
+
+//google signin
+const handleGoogleSignin = () => {
+  console.log("form google")
+   googleSignin ()
+  .then((result) => {
+   const user =result.user;
+   console.log(user);
+ 
    navigate("/")
   })
     .catch((error) => {
-    const errorCode = error.code;
+
     const errorMessage = error.message;
-    alert(errorCode, errorMessage);
+    toast.error( errorMessage);
   });
 }
+
+//forget pass
+// const handleForgetPass = (e) => {
+//   const email = emailRef.current.value;
+
+//   resetPassword(email)
+//   .then((result) => {
+//     toast.success("Check your email to reset password")
+//   })
+//     .catch((error) => {
+//     const errorMessage = error.message;
+//     toast.error(errorMessage)
+//   });
+// }
+const handleForgotPassword = () => {
+    const email = emailRef.current.value;
+    navigate("/forgot-password", { state: { email } });
+  };
 
   return (
     <div>
@@ -41,7 +86,7 @@ const handleLogin = (e) => {
       >
         <div className="hero-content flex-col ">
           <div className=" flex ">
-            <img src={logo} alt="" className='h-16 w-16 rounded-full' />
+            <img src={logo} alt=" " className='h-16 w-16 rounded-full' />
             <h1 className="text-4xl font-bold">Login Your Account!</h1>
           </div>
           <div className="card bg-transparent w-full max-w-sm shrink-0 shadow-2xl overflow-hidden">
@@ -56,6 +101,7 @@ const handleLogin = (e) => {
                   <input
                   name='email'
                     type="email"
+                    ref={emailRef}
                     placeholder="Email"
                     className="w-full p-3 mb-4 rounded border border-black-400 bg-transparent text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-pink-400"
                   />
@@ -76,9 +122,15 @@ const handleLogin = (e) => {
                     </div>
                   
 
-                  <div><a className="link link-hover font-semibold ">Forgot password?</a></div>
+                
+       <p onClick={handleForgotPassword}>Forgot Password?</p>
 
-                  <button className="btn  mt-4  w-full p-3 mb-4 rounded border border-black-400 bg-transparent text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-pink-400 ">
+
+
+                  <button
+                  type="button"
+                   onClick={handleGoogleSignin} 
+                   className="btn  mt-4  w-full p-3 mb-4 rounded border border-black-400 bg-transparent text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-pink-400 ">
                     <FcGoogle size={24} />
                     Continue with google</button>
 

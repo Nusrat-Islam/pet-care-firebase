@@ -4,20 +4,28 @@ import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast from 'react-hot-toast';
 import { useState } from 'react';
+import { RiEyeCloseFill } from 'react-icons/ri';
+import { FaEye } from 'react-icons/fa';
+
+
+
+
 
 const Register = () => {
-    const {register, setUser} = use(AuthContext);
+ 
+    const {register, setUser, profileUpdate} = use(AuthContext);
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
 
     const handleRegister = (e) =>{
       e.preventDefault();
       const form = e.target;
-      const name = form.name?.value;
+      const displayName = form.name?.value;
       const photoURL = form.photo?.value;
       const email = form.email?.value;
       const password = form.password?.value;
-      console.log(email,photoURL, name, password)
+      console.log(email,photoURL, displayName, password)
+      
 
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
@@ -28,17 +36,49 @@ if (!passwordRegex.test(password)) {
 
       //firebase functionality
        register(email,password)
-       .then(result => {
-        const user = result.user;
-         setUser(user)
-         navigate("/")
+       .then(res => {
+          console.log(res)
+         profileUpdate(
+          displayName,
+          photoURL )
+          .then((res)=> {
+
+          toast.success("REgistration Successfull")
+           navigate("/")
+          })
+          .catch((e) => {
+            console.log(e)
+            toast.error(e.message)
+          })
+        
        })
-       .catch(e => {
-        const errorCode =e.code;
-        const errorMessage = e.message;
-        alert(errorCode, errorMessage);
-       })
-    }
+       .catch((error) => {
+        console.log(error)
+  const errorCode = error.code;
+
+  if (errorCode === "auth/email-already-in-use") {
+    toast.error("This email is already registered!");
+  } 
+  else if (errorCode === "auth/invalid-email") {
+    toast.error("Invalid email address!");
+  } 
+  else if (errorCode === "auth/weak-password") {
+    toast.error("Password must be at least 6 characters!");
+  } 
+  else if (errorCode === "auth/missing-password") {
+    toast.error("Please enter a password!");
+  } 
+  else if (errorCode === "auth/internal-error") {
+    toast.error("Internal error occurred. Try again!");
+  } 
+  else {
+    toast.error("Something went wrong. Try again later!");
+    console.error("Register error:", error);
+  }
+})
+
+
+};
 
 
 
@@ -99,13 +139,11 @@ if (!passwordRegex.test(password)) {
                              className="w-full p-3 mb-4 rounded border border-black-400 bg-transparent text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-pink-400 "
                            />
                           
-                           <div onClick={()=> setShow(!show)} className="absolute right-10 top-39 curser-pointer">
+                           <div onClick={()=> setShow(!show)} className="absolute right-10 top-83 curser-pointer">
                              {show? <FaEye size={16} /> : < RiEyeCloseFill size={16}/>}
                              </div>
 
-          <div><a className="link link-hover font-semibold ">Forgot password?</a></div>
-  
-         
+                   
           <button type='submit' className="btn btn-neutral mt-4 border-none bg-gradient-to-r  from-purple-500 via-blue-600 to-pink-500">Register</button>
         </fieldset>
         <p className='text-xm font-semibold'>Already have an account? <Link to='/login' className='text-pink-600 hover:underline'>Login</Link></p>

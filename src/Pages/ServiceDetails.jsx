@@ -99,20 +99,21 @@ const handleBooking = (e) => {
               type="text"
               name="name"
               value={booking.name}
-              placeholder="Your Name"
-              className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:border-amber-400"
+              placeholder='Your Name'
+              className="w-full px-3 py-2 rounded-lg  bg-gray-800 border border-gray-600 focus:outline-none focus:border-amber-400"
               required
             />
 
             <input
-            onChange={handleInput}
-              type="email"
+             onChange={handleInput}
+              type="text"
               name="email"
-               value={booking.email}
+              value={booking.email}
               placeholder="Your Email"
               className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:border-amber-400"
               required
             />
+       
 
             <button
               type="submit"

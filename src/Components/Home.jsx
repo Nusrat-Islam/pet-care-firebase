@@ -15,6 +15,9 @@ const Home = () => {
     // console.log(petsData);
     return (
   
+
+      
+
    <div>
        <div>
          <HeroSlider></HeroSlider>

@@ -33,8 +33,8 @@ const HeroSlider = () => {
     />
     <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center  text-white text-6xl font-bold animate__animated animate__backInLeft">
     
-      <h4 className="text-4xl text-pink-500 font-bold mx-w-md">Cozy Companions for Winter 🐾</h4>
-      <p>The World's Best Team for Pet Care Services</p> 
+      <h4 className="text-2xl md:text-3xl lg:4xl text-pink-500 font-bold mx-w-md">Cozy Companions for Winter 🐾</h4>
+      <p className="text-2xl md:text-3xl lg:text-4xl">The World's Best Team for Pet Care Services</p> 
     </div>
   </div>
 </SwiperSlide>

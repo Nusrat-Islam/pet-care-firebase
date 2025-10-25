@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB30t-KHeQBd24kbea5VmKZfMLdfMM2rm8",
-  authDomain: "pet-care-in-winter-26780.firebaseapp.com",
-  projectId: "pet-care-in-winter-26780",
-  storageBucket: "pet-care-in-winter-26780.firebasestorage.app",
-  messagingSenderId: "1047012940581",
-  appId: "1:1047012940581:web:5bc270d0df6f522c2bd8cc"
+ apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

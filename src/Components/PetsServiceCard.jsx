@@ -17,7 +17,7 @@ const PetsServiceCard = ({ service }) => {
   return (
     <div
       data-aos="fade-up"
-      className="card bg-base-100 shadow-lg hover:shadow-2xl  transition-all duration-300 border border-gray-100 rounded-2xl "
+      className="card bg-base-100 shadow-lg hover:shadow-2xl  transition-all duration-300 border border-gray-100 rounded-2xl  "
     >
 <figure className=" h-80 md:h-[520px] lg:h-[520px] w-full overflow-hidden object-cover rounded-t-2xl">
   <img
@@ -29,7 +29,7 @@ const PetsServiceCard = ({ service }) => {
 
 
       <div className="card-body p-4">
-        <h2 className="card-title text-lg font-semibold text-gray-800 mb-2">
+        <h2 className="card-title text-lg font-semibold text-green-400 mb-2">
           {serviceName}
         </h2>
 
