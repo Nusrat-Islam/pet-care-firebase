@@ -1,8 +1,7 @@
 # 🐾 PAWSY – Pet Care in Winter
 
 ## 🌐 Live Website
-[Visit Live Site](https://your-live-site-link.vercel.app)  
-*(Replace this URL with your deployed project link)*
+https://vermillion-eclair-e9930e.netlify.app/
 
 ---
 
